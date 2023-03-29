@@ -46,16 +46,11 @@ main{
     h3{
         color: white;
         border-radius: 25px 25px 25px 25px;
-        background-color: #0065fc;
-        border: 1px solid #0065fc;
+        background-color: #486aa8;
+        border: 1px solid #486aa8;
         padding: 1rem;
-        width: 25%;
+        width: 16%;
         margin: auto;
-        :hover{
-            cursor: pointer;
-            transform: scale(1.02);
-            box-shadow: 0px 5px 4px #3e83eb;
-        }
     }
 }
 .Fonctionnement_barre{
@@ -88,7 +83,7 @@ main{
                 }
         }
         .ligne_trois{
-            background-color: rgb(118, 172, 233);
+            background-color: rgb(164, 194, 228);
             border-radius: 20px 20px 20px 20px;
             box-shadow: 0px 5px 4px rgb(90, 165, 235);
             padding: 1rem;
@@ -127,6 +122,7 @@ main{
             box-shadow: 0px 5px 4px rgb(90, 165, 235);
             img{
                 width: 100%;
+                height: auto;
                 border-radius: 25px 25px 0px 0px;
             }
             figcaption{
@@ -138,10 +134,11 @@ main{
                     display: flex;
                     align-items: baseline;
                     margin-top: -2rem;
+                    gap: 5rem;
                     i:hover{
                         cursor: pointer;
-                        transform: scale(1);
-                        color: #ce800c;
+                        transform: scale(1.15);
+                        background-image: #2365df;
                     }
                 }
             }
@@ -168,9 +165,8 @@ footer {
     }
 }
 /* responsive avec media query */
-
 /* Media query pour android avec max width de 850 */
-@media (min-width: 851px) and (max-width: 1000px){
+@media all and (min-width: 851px) and (max-width: 1000px){
     main{
         width: auto;
         .navigation{
@@ -261,6 +257,9 @@ footer {
         }
         .menu{
             padding: 1rem;
+            h3{
+                width: 13rem;
+            }
         }
         .Fonctionnement_barre{
             padding: 1rem;
@@ -283,10 +282,11 @@ footer {
             }
         }
         figcaption{
-            font-size: 1.5rem;
-            padding-left: 2rem;
+            font-size: 1.2rem;
+            .Folie-Méricourt{
             p{
-                padding-right: 8rem;
+                margin-right: -1rem;
+            }
             }
         }
     }  
@@ -294,44 +294,56 @@ footer {
 
 /* Media query pour android avec max width de 375 */
 @media (max-width: 375px){
+    header{
+        h1{
+            width: 100%;
+        }
+    }
     main{
         width: 100%;
         .navigation{
-            width: auto;
+            width: 100%;
             height: 5rem;
         }
-        .menu{
-            padding: 2rem;
-            h3{
-                width: auto;
+    }    
+    .menu{
+        padding: 1rem;
+        h3{
+            width: 12.5rem;
+        }
+        h1{
+            font-size: 1.2rem;
+        }
+    }
+    .Fonctionnement_barre{
+        padding: 1.2rem;
+        .lignes{
+            display: block;
+        }
+    }
+    .ligne_une, .ligne_deux, .ligne_trois{
+        margin-top: 1rem;
+    }
+    .restaurant_menu{
+        padding: 0.7rem;
+        .restaurants{
+            display: block;
+            img{
+                height: auto;
+            }
+            figcaption{
+                font-size: 1rem;
             }
         }
-        .Fonctionnement_barre{
-            padding: 1rem;
-            .lignes{
-                display: block;
-                .ligne_une, .ligne_deux, .ligne_trois{
-                    margin-top: 1rem;
-                }
-            }
-        }
-        .restaurant_menu{
-            padding: 1rem;
-            .restaurants{
-                display: grid;
-                grid-template-columns: 1fr;
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
-        figcaption{
-            font-size: 1.5rem;
-            padding-left: 2rem;
+        .restaurant_un{
+            margin-top: 1.2rem;
             p{
-                padding-right: 3rem;
+                font-size: small;
+                align-items: center;
             }
         }
+    }
+    footer{
+        margin-top: 3rem;
     }
 }

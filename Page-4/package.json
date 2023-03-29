@@ -1,11 +1,11 @@
 {
   "name": "page-4",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./Ma_page_4.scss:./Ma_page_4.css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }

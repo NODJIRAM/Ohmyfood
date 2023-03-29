@@ -47,16 +47,11 @@ main {
 .menu h3 {
   color: white;
   border-radius: 25px 25px 25px 25px;
-  background-color: #0065fc;
-  border: 1px solid #0065fc;
+  background-color: #486aa8;
+  border: 1px solid #486aa8;
   padding: 1rem;
-  width: 25%;
+  width: 16%;
   margin: auto;
-}
-.menu h3 :hover {
-  cursor: pointer;
-  transform: scale(1.02);
-  box-shadow: 0px 5px 4px #3e83eb;
 }
 
 .Fonctionnement_barre {
@@ -75,11 +70,41 @@ main {
   box-shadow: 0px 5px 4px #d6cbcb;
   padding: 1rem;
 }
+.Fonctionnement_barre .lignes .ligne_une span, .Fonctionnement_barre .lignes .ligne_deux span {
+  display: flex;
+  gap: 1rem;
+}
+.Fonctionnement_barre .lignes .ligne_une span .numero, .Fonctionnement_barre .lignes .ligne_deux span .numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #0065fc;
+  color: white;
+  width: 30px;
+  height: 30px;
+  margin-left: -1.8rem;
+}
 .Fonctionnement_barre .lignes .ligne_trois {
-  background-color: #76ace9;
+  background-color: #a4c2e4;
   border-radius: 20px 20px 20px 20px;
   box-shadow: 0px 5px 4px #5aa5eb;
   padding: 1rem;
+}
+.Fonctionnement_barre .lignes .ligne_trois span {
+  display: flex;
+  gap: 1rem;
+}
+.Fonctionnement_barre .lignes .ligne_trois span .numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #0065fc;
+  color: white;
+  width: 30px;
+  height: 30px;
+  margin-left: -1.8rem;
 }
 
 /* fin de la partie fonctionnement et barre de trois menu */
@@ -101,6 +126,7 @@ main {
 }
 .restaurant_menu .restaurants .restaurant_un img {
   width: 100%;
+  height: auto;
   border-radius: 25px 25px 0px 0px;
 }
 .restaurant_menu .restaurants .restaurant_un figcaption {
@@ -113,11 +139,12 @@ main {
   display: flex;
   align-items: baseline;
   margin-top: -2rem;
+  gap: 5rem;
 }
 .restaurant_menu .restaurants .restaurant_un figcaption .Folie-Méricourt i:hover {
   cursor: pointer;
-  transform: scale(1);
-  color: #ce800c;
+  transform: scale(1.15);
+  background-image: #2365df;
 }
 
 .image3 {
@@ -143,7 +170,7 @@ footer h2 {
 
 /* responsive avec media query */
 /* Media query pour android avec max width de 850 */
-@media (min-width: 851px) and (max-width: 1000px) {
+@media all and (min-width: 851px) and (max-width: 1000px) {
   main {
     width: auto;
   }
@@ -234,6 +261,9 @@ footer h2 {
   main .menu {
     padding: 1rem;
   }
+  main .menu h3 {
+    width: 13rem;
+  }
   main .Fonctionnement_barre {
     padding: 1rem;
   }
@@ -255,53 +285,68 @@ footer h2 {
     height: auto;
   }
   main figcaption {
-    font-size: 1.5rem;
-    padding-left: 2rem;
+    font-size: 1.2rem;
   }
-  main figcaption p {
-    padding-right: 8rem;
+  main figcaption .Folie-Méricourt p {
+    margin-right: -1rem;
   }
 }
 /* Media query pour android avec max width de 375 */
 @media (max-width: 375px) {
+  header h1 {
+    width: 100%;
+  }
+
   main {
     width: 100%;
   }
   main .navigation {
-    width: auto;
+    width: 100%;
     height: 5rem;
   }
-  main .menu {
-    padding: 2rem;
-  }
-  main .menu h3 {
-    width: auto;
-  }
-  main .Fonctionnement_barre {
+
+  .menu {
     padding: 1rem;
   }
-  main .Fonctionnement_barre .lignes {
+  .menu h3 {
+    width: 12.5rem;
+  }
+  .menu h1 {
+    font-size: 1.2rem;
+  }
+
+  .Fonctionnement_barre {
+    padding: 1.2rem;
+  }
+  .Fonctionnement_barre .lignes {
     display: block;
   }
-  main .Fonctionnement_barre .lignes .ligne_une, main .Fonctionnement_barre .lignes .ligne_deux, main .Fonctionnement_barre .lignes .ligne_trois {
+
+  .ligne_une, .ligne_deux, .ligne_trois {
     margin-top: 1rem;
   }
-  main .restaurant_menu {
-    padding: 1rem;
+
+  .restaurant_menu {
+    padding: 0.7rem;
   }
-  main .restaurant_menu .restaurants {
-    display: grid;
-    grid-template-columns: 1fr;
+  .restaurant_menu .restaurants {
+    display: block;
   }
-  main .restaurant_menu .restaurants img {
-    width: 100%;
+  .restaurant_menu .restaurants img {
     height: auto;
   }
-  main figcaption {
-    font-size: 1.5rem;
-    padding-left: 2rem;
+  .restaurant_menu .restaurants figcaption {
+    font-size: 1rem;
   }
-  main figcaption p {
-    padding-right: 3rem;
+  .restaurant_menu .restaurant_un {
+    margin-top: 1.2rem;
+  }
+  .restaurant_menu .restaurant_un p {
+    font-size: small;
+    align-items: center;
+  }
+
+  footer {
+    margin-top: 2rem;
   }
 }
