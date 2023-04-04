@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap');
+
+/* transition de la page */
+#transition{
+    background-color:  hsla(0,0%,100%,.9);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    inset: 0;
+    opacity: 1;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    color: hsla(0, 11%, 12%, 0.9);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    animation: chargement 0.2s 2s forwards;
+    .texte{
+        position: absolute;
+    }
+    .cercle{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 1000px;
+        display: grid;
+        z-index: 0;
+        animation: arc 4s;
+    }
+}
+@keyframes chargement{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes arc {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px rgb(31, 79, 134);
+    }
+    50% {
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px rgb(31, 79, 134);
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px rgb(31, 79, 134);
+    }
+}
+/* fin de la transition de la page */
+ 
+/* realisatiopn du header avec css */
+header{
+    font-family: "shrikhand", cursive;
+    text-align: center;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0;
+    background-color: whitesmoke;
+    box-shadow: 0px 3px 2px grey;
+    padding: 0.01rem;
+}
+/* fin de header pour*/
+
+/* debut de css sur le body (corps de la page) */
+body{
+    margin: 0;
+}
+/* fin de body avec css */
+
+/* css pour la partie main */
+main{
+    width: 75%;
+    margin: auto;
+}
+/* fin de la partie main */
+
+/* css de la partie fonctionnement et barre de trois menu */
+.navigation {
+    font-family: "roboto", cursive;
+    text-align: center;
+    font-size: 1.2rem; 
+    background-color: #eaeaea;
+    padding: 0.05rem;
+        i {
+        font-size: 1.6rem;
+    }
+}
+.menu{
+    background-color: #ddcccc;
+    text-align: center;
+    padding: 2.5rem;
+    p{
+        font-size: 1.5rem;
+    }
+    h3{
+        color: white;
+        border-radius: 50px;
+        background: linear-gradient(170deg, #ff79da, #9356dc);
+        padding: 1rem;
+        width: 16%;
+        margin: auto;
+        &:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+            transition: 250ms;
+            box-shadow: 4px 4px 2px lightgrey;
+        }
+    }
+}
+.Fonctionnement_barre{
+    padding-top: 2.5rem;
+    .lignes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        gap: 3rem;
+        .ligne_une, .ligne_deux {
+            background-color: rgb(248, 248, 248);
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: 0px 5px 4px rgb(214, 203, 203);
+            padding: 1rem;
+                span{
+                    display: flex;
+                    gap: 1rem;
+                        .numero{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            background-color: #0065fc;
+                            color: white;
+                            width: 30px;
+                            height: 30px;
+                            margin-left: -1.8rem;
+                        }
+                }
+        }
+        .ligne_trois{
+            background-color: rgb(164, 194, 228);
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: 0px 5px 4px rgb(90, 165, 235);
+            padding: 1rem;
+            span{
+                display: flex;
+                gap: 1rem;
+                    .numero{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: #0065fc;
+                        color: white;
+                        width: 30px;
+                        height: 30px;
+                        margin-left: -1.8rem;
+                    }
+            }
+        }
+    }
+}
+/* fin de la partie fonctionnement et barre de trois menu */
+
+/* creation de la section restaurants et menu avec images */
+.restaurant_menu{
+    width: auto;
+    padding-top: 2.5rem;
+    .restaurants{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2.5rem;
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .restaurant_un{
+            background-color: aliceblue;
+            width: auto;
+            border-radius: 25px 25px 25px 25px;
+            box-shadow: 0px 5px 4px rgb(90, 165, 235);
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 25px 25px 0px 0px;
+            }
+            figcaption{
+                margin-left: 1rem;
+                h5{
+                    font-size: 1.2rem;
+                    margin-top: 0.5rem;
+                }
+                .Folie-Méricourt{
+                    position: relative;
+                    p{
+                        position: relative;
+                        bottom: 1rem;
+                    }
+                    i{
+                        position: absolute;
+                        right: 1rem;
+                        top: -200%;
+                        font-size: 2rem;
+                    }
+                    .fa-solid{
+                        opacity: 0;
+                        transition: all 200ms ease-in-out;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        background-image: linear-gradient(to top,purple,rgb(78, 114, 214));
+                    }
+                    .fa-solid:hover{
+                        opacity: 1;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+.image3{
+    height: 225px;
+}
+footer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(68, 64, 60);
+    color: white;
+    margin-top: 8rem;
+    height: 13rem;
+    .foot{
+        padding-left: 2rem;
+    }
+    h2{
+        font-family: "shrikhand", cursive;
+        padding-left: 2rem;
+    }
+}
+/* responsive avec media query */
+/* Media query pour android avec max width de 850 */
+@media all and (min-width: 851px) and (max-width: 1000px){
+    main{
+        width: auto;
+        .navigation{
+            width: 100%;
+            height: 5rem;
+        }
+        .menu{
+            padding: 1rem;
+            h3{
+                width: 21%;
+            }
+        }
+        .Fonctionnement_barre{
+            padding: 1rem;
+            .lignes{
+                display: flex;
+                .ligne_une, .ligne_deux, .ligne_trois{
+                    margin-top: 1rem;
+                    width: 100%;
+                }
+            }
+        }
+        .restaurant_menu{
+            padding: 1rem;
+            .restaurants{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        figcaption{
+            font-size: 1rem;
+            padding-left: 2rem;
+            p{
+                padding-right: 6.5rem;
+            }
+        }
+    }
+    footer{
+        font-size: 0.8rem;
+        margin-top: 2rem;
+    } 
+}
+
+/* Media query pour android avec max width de 850 */
+@media all and (min-width: 641px) and (max-width: 850px){
+    main{
+        width: 100%;
+        .navigation{
+            width: auto;
+            height: 5rem;
+        }
+        .menu{
+            padding: 1rem;
+        }
+        .Fonctionnement_barre{
+            padding: 1rem;
+            .lignes{
+                display: flex;
+                .ligne_une, .ligne_deux, .ligne_trois{
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .restaurant_menu{
+            padding: 1rem;
+            .restaurants{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        figcaption{
+            font-size: 1.5rem;
+            padding-left: 2rem;
+            p{
+                padding-right: 6.5rem;
+            }
+        }
+    }
+}
+
+/* Media query pour android avec max width de 640 */
+@media all and (min-width: 376px) and (max-width: 640px){
+    main{
+        width: 100%;
+        .navigation{
+            width: auto;
+            height: 5rem;
+        }
+        .menu{
+            padding: 1rem;
+            h3{
+                width: 13rem;
+            }
+        }
+        .Fonctionnement_barre{
+            padding: 1rem;
+            .lignes{
+                display: block;
+                .ligne_une, .ligne_deux, .ligne_trois{
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .restaurant_menu{
+            padding: 1rem;
+            .restaurants{
+                display: grid;
+                grid-template-columns: 1fr;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        figcaption{
+            font-size: 1rem;
+            .Folie-Méricourt{
+            p{
+                margin-right: -1rem;
+            }
+            }
+        }
+    } 
+    footer{
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    } 
+}
+
+/* Media query pour android avec max width de 375 */
+@media (max-width: 375px){
+    header{
+        h1{
+            width: 100%;
+        }
+    }
+    main{
+        width: 100%;
+        .navigation{
+            width: 100%;
+            height: 5rem;
+        }
+    }    
+    .menu{
+        padding: 1rem;
+        h3{
+            width: 12.5rem;
+        }
+        h1, p{
+            font-size: 1.2rem;
+        }
+    }
+    .Fonctionnement_barre{
+        padding: 1.2rem;
+        .lignes{
+            display: block;
+        }
+    }
+    .ligne_une, .ligne_deux, .ligne_trois{
+        margin-top: 1rem;
+    }
+    .restaurant_menu{
+        padding: 0.7rem;
+        .restaurants{
+            display: block;
+            height: max-content;
+            img{
+                height: auto;
+            }
+            figcaption{
+                font-size: 1rem;
+            }
+        }
+        .restaurant_un{
+            margin-top: 1.2rem;
+            p{
+                font-size: small;
+                align-items: center;
+            }
+        }
+    }
+    footer{
+        margin-top: 3rem;
+    }
+}

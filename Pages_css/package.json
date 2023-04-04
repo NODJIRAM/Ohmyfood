@@ -1,0 +1,11 @@
+{
+  "name": "pages_css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./Ma_page.scss:./Ma_page.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
